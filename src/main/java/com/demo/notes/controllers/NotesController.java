@@ -74,7 +74,7 @@ public class NotesController {
 			response = String.class, responseContainer = "Json", consumes = "application/json")
 	@PutMapping(value = "/notes/{id}")
 	@ResponseBody
-	public ResponseEntity<Object> updateNote(@PathVariable("id") int id, Note note) {
+	public ResponseEntity<Object> updateNote(@PathVariable("id") int id, @RequestBody Note note) {
 		String method = "updateNote()";
 		System.out.println("in:: " + method);
 		ResponseEntity<Object> ret = null;
